@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RusAirApp"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
         Title="RusAir" Height="1024" Width="1080" 
         Background="Transparent"
@@ -11,13 +12,13 @@
         WindowStartupLocation="CenterScreen">
 
 
-
-    <Grid MouseDown="Grid_MouseDown">
+ <ScrollViewer VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible">
+        <Grid MouseDown="Grid_MouseDown">
         <Grid.RowDefinitions>
             <RowDefinition Height="60"/>
             <RowDefinition Height="145"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="10"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         
         
@@ -26,7 +27,7 @@
         </Grid.ColumnDefinitions>
         
         
-            <Border Grid.Row="0" Grid.Column="0" Grid.RowSpan="4" Grid.ColumnSpan="4">
+        <Border Grid.Row="0" Grid.Column="0" Grid.RowSpan="4" Grid.ColumnSpan="4">
             <Border.Background>
                 <LinearGradientBrush StartPoint="0,1"
                                      EndPoint="1,1">
@@ -43,10 +44,14 @@
         <TextBlock Style="{StaticResource base_tblock}" Grid.Row="1" Text="помогаем экономить"
                    Margin="60" FontSize="25"/>
         
-        <Button Name="BtnLog" Margin="0 0 150 0" Width="40" Height="40" Click="BtnLog_Click" Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Top" BorderBrush="Transparent" Background="#01000000">
+        <Button Name="BtnLog" Margin="0 0 150 0" Width="40" Height="40" Click="BtnLog_Click" 
+                Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Top" BorderBrush="Transparent" 
+                Background="#01000000">
             <Image Source="/Resources/ico.png" Height="25" Width="25"></Image>
         </Button>
-        <Button Name="BtnExit" Margin="0 0 60 0" Width="40" Height="40" Click="BtnExit_Click" Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Top" BorderBrush="Transparent" Background="#01000000">
+        <Button Name="BtnExit" Margin="0 0 60 0" Width="40" Height="40" Click="BtnExit_Click" 
+                Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Top" BorderBrush="Transparent" 
+                Background="#01000000">
             <Image Source="/Resources/ico1.png" Height="25" Width="25"></Image>
         </Button>
 
@@ -59,59 +64,115 @@
                    Margin="60 15 15 0" HorizontalAlignment="Left"
                    FontSize="25" Grid.Row="0"/>
         
-        <Image Source="/Resources/RusAirIcoNew.png" HorizontalAlignment="Left" Margin="15 0 0 0" Height="40" Width="40"/>
-        <TextBox Text="TestText" Grid.Row="2" Style="{StaticResource base_tbox}" Margin="0 30 600 0">
+        <Image Source="/Resources/RusAirIcoNew.png" HorizontalAlignment="Left" Margin="15 0 0 0" 
+               Height="40" Width="40"/>
+        <TextBox Grid.Row="2" Style="{StaticResource base_tbox}" Margin="0 30 600 0">
             <TextBox.Template>
                 <ControlTemplate>
-                    <Border CornerRadius="12 0 0 12" Padding="15" BorderThickness="1" BorderBrush="#705BE3" Background="White" Height="50" Width="100">
+                    <Border CornerRadius="12 0 0 12" Style="{StaticResource base_border}">
                         <ScrollViewer Margin="0" x:Name="PART_ContentHost" />
                     </Border>
                 </ControlTemplate>
             </TextBox.Template>
         </TextBox>
-        <TextBox Text="TestText" Grid.Row="2" Style="{StaticResource base_tbox}" Margin="0 30 390 0">
+
+        <TextBlock Text="Откуда" Grid.Row="2" Background="Transparent" 
+                   Style="{StaticResource another_tblock}" HorizontalAlignment="Center"
+                   Margin="0 10 590 0"/>
+        <TextBlock Text="Куда" Grid.Row="2" Background="Transparent" 
+                   Style="{StaticResource another_tblock}" HorizontalAlignment="Center" 
+                   Margin="0 10 385 0"/>
+        <TextBlock Text="Когда" Grid.Row="2" Background="Transparent" 
+                   Style="{StaticResource another_tblock}" HorizontalAlignment="Center" 
+                   Margin="0 10 180 0"/>
+        <TextBlock Text="Обратно" Grid.Row="2" Background="Transparent" 
+                   Style="{StaticResource another_tblock}" HorizontalAlignment="Center" 
+                   Margin="0 10 -25 0"/>
+        <TextBlock Text="Пассажиры икласс" FontSize="10" Grid.Row="2" Background="Transparent" 
+                   Style="{StaticResource another_tblock}" HorizontalAlignment="Center" 
+                   Margin="0 12 -240 0"/>
+
+        <TextBox Grid.Row="2" Style="{StaticResource base_tbox}" Margin="0 30 390 0">
             <TextBox.Template>
                 <ControlTemplate>
-                    <Border CornerRadius="0" Padding="15" BorderThickness="1" BorderBrush="#705BE3"
-                            Background="White" Height="50" Width="100">
+                    <Border CornerRadius="0" Style="{StaticResource base_border}">
                         <ScrollViewer Margin="0" x:Name="PART_ContentHost" />
                     </Border>
                 </ControlTemplate>
             </TextBox.Template>
         </TextBox>
-        <TextBox Text="TestText" Grid.Row="2" Style="{StaticResource base_tbox}" Margin="0 30 180 0">
+        <TextBox Grid.Row="2" Style="{StaticResource base_tbox}" Margin="0 30 180 0">
             <TextBox.Template>
                 <ControlTemplate>
-                    <Border CornerRadius="0" Padding="15" BorderThickness="1" BorderBrush="#705BE3"
-                            Background="White" Height="50" Width="100">
+                    <Border CornerRadius="0" Style="{StaticResource base_border}">
                         <ScrollViewer Margin="0" x:Name="PART_ContentHost" />
                     </Border>
                 </ControlTemplate>
             </TextBox.Template>
         </TextBox>
-        <TextBox Text="TestText" Grid.Row="2" Style="{StaticResource base_tbox}" Margin="0 30 -30 0">
+        <TextBox Grid.Row="2" Style="{StaticResource base_tbox}" Margin="0 30 -30 0">
             <TextBox.Template>
                 <ControlTemplate>
-                    <Border CornerRadius="0" Padding="15" BorderThickness="1" BorderBrush="#705BE3"
-                            Background="White" Height="50" Width="100">
+                    <Border CornerRadius="0" Style="{StaticResource base_border}">
                         <ScrollViewer Margin="0" x:Name="PART_ContentHost" />
                     </Border>
                 </ControlTemplate>
             </TextBox.Template>
         </TextBox>
-        <TextBox Text="TestText" Grid.Row="2" Style="{StaticResource base_tbox}" Margin="0 30 -240 0">
+        <TextBox Grid.Row="2" Style="{StaticResource base_tbox}" Margin="0 30 -240 0">
             <TextBox.Template>
                 <ControlTemplate>
-                    <Border CornerRadius="0 12 12 0" Padding="15" BorderThickness="1" 
-                            BorderBrush="#705BE3" Background="White" Height="50" Width="100">
+                    <Border CornerRadius="0 12 12 0" Style="{StaticResource base_border}">
                         <ScrollViewer Margin="0" x:Name="PART_ContentHost" />
                     </Border>
                 </ControlTemplate>
             </TextBox.Template>
         </TextBox>
-        <Button x:Name="BtnFind" Content="Найти" IsDefault="True" HorizontalAlignment="Center" VerticalAlignment="Top" Click="BtnFind_Click" Grid.Row="2" Height="45" Width="160" Foreground="White"
-                FontWeight="Bold" FontFamily="Arial"
-                BorderBrush="White" Background="#677ABB"
-                Margin="0 32 -510 0"/>
-    </Grid>
+            <Button x:Name="BtnFind" Content="Найти" IsDefault="True" Style="{StaticResource other_button}"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Top" Click="BtnFind_Click" Grid.Row="2" 
+                    Height="45" Width="160" Foreground="White"
+                    FontWeight="Bold" FontFamily="Arial"
+                    BorderBrush="White" Background="#677ABB"
+                    Margin="0 32 -510 0"/>
+
+            <Border CornerRadius="20 20 20 20" HorizontalAlignment="Center" 
+                    VerticalAlignment="Center" Grid.Row="2" Grid.Column="0" Height="250"
+                    BorderThickness="1" BorderBrush="#677ABB" Width="200"
+                    Margin="250 100 0 0">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,1"
+                                     EndPoint="1,1">
+                        <GradientStop Color="#26df45"
+                                  Offset=".1"/>
+                        <GradientStop Color="#eaddef"
+                                  Offset="2"/>
+                        <GradientStop Color="#9ae037"
+                                  Offset="3"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+            <Image Source="/Resources/money.png" Grid.Row="2" Height="150" Width="150"
+                   HorizontalAlignment="Center" Margin="320 0 0 0"/>
+            <TextBlock Text="Билеты" Style="{StaticResource other_tblock}" VerticalAlignment="Center" Margin="140 0 0 25" FontSize="15" HorizontalAlignment="Center"  Grid.Row="2"/>
+            <TextBlock Text="Горячие" Style="{StaticResource other_tblock}" VerticalAlignment="Center" 
+                       Margin="140 0 0 60" FontSize="18" HorizontalAlignment="Center" Grid.Row="2"/>
+            <TextBlock Text="Скоро разберут!" Style="{StaticResource other_tblock}" VerticalAlignment="Center" 
+                       Margin="140 20 0 0" FontSize="10" HorizontalAlignment="Center" Grid.Row="2"/>
+            <Border CornerRadius="20 20 20 20" HorizontalAlignment="Center" 
+                    VerticalAlignment="Center" Grid.Row="2" Grid.Column="0" Height="250"
+                    BorderThickness="1" BorderBrush="#677ABB" Width="200"
+                    Margin="0 100 250 0">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,1"
+                                     EndPoint="1,1">
+                        <GradientStop Color="#07bbda"
+                                  Offset="0.1"/>
+                        <GradientStop Color="#eaddef"
+                                  Offset="2"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+        </Grid>
+ </ScrollViewer>
 </Window>

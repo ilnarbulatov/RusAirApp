@@ -31,7 +31,8 @@ namespace RusAirApp.Windows
 
         private void BtnCnl_Click(object sender, RoutedEventArgs e)
         {
-            Application.Current.Shutdown();
+            //Application.Current.Shutdown();
+            this.Close();
         }
     }
 }

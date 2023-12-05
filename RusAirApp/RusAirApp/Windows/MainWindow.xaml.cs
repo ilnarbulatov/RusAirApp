@@ -39,8 +39,8 @@ namespace RusAirApp
             //    }
             //}
             EnterWindow enterWindow = new EnterWindow();
-            enterWindow.Owner = this;
-            this.Hide();// скрываем текущую главную форму
+            //enterWindow.Owner = this;
+            /*this.Hide();*/// скрываем текущую главную форму
             enterWindow.Show();
         }
 
