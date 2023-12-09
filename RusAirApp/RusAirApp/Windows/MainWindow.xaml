@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:RusAirApp"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="RusAir" Height="1024" Width="1080" 
+        Title="RusAir" Height="1000" Width="1080" 
         Background="Transparent"
         Style="{StaticResource base_window}"
         WindowStartupLocation="CenterScreen">
@@ -20,7 +20,6 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        
         
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -154,6 +153,7 @@
             </Border>
             <Image Source="/Resources/money.png" Grid.Row="2" Height="150" Width="150"
                    HorizontalAlignment="Center" Margin="320 0 0 0"/>
+            
             <TextBlock Text="Билеты" Style="{StaticResource other_tblock}" VerticalAlignment="Center" Margin="140 0 0 25" FontSize="15" HorizontalAlignment="Center"  Grid.Row="2"/>
             <TextBlock Text="Горячие" Style="{StaticResource other_tblock}" VerticalAlignment="Center" 
                        Margin="140 0 0 60" FontSize="18" HorizontalAlignment="Center" Grid.Row="2"/>
@@ -170,6 +170,49 @@
                                   Offset="0.1"/>
                         <GradientStop Color="#eaddef"
                                   Offset="2"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+            <Border CornerRadius="10 10 10 10" HorizontalAlignment="Center" 
+                    VerticalAlignment="Center" Grid.Row="2" Grid.Column="0" Height="30"
+                    BorderThickness="1" BorderBrush="#677ABB" Width="150"
+                    Margin="0 300 290 0">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,1"
+                                     EndPoint="1,1">
+                        <GradientStop Color="White"
+                                  Offset="0.0"/>
+                        <GradientStop Color="Gray"
+                                  Offset="2"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+            <Image Source="/Resources/telegram.png" Grid.Row="2" Height="130" Width="130"
+                   HorizontalAlignment="Center" Margin="0 0 155 15"/>
+            <TextBlock Text="Здесь много" Style="{StaticResource other_tblock}" VerticalAlignment="Center" Margin="0 0 350 25" FontSize="14" HorizontalAlignment="Center"  Grid.Row="2"/>
+            <TextBlock Text="интересного!" Style="{StaticResource other_tblock}" VerticalAlignment="Center" 
+                       Margin="0 5 350 0" FontSize="13" HorizontalAlignment="Center" Grid.Row="2"/>
+            <TextBlock Text="Подписаться на рассылку" Style="{StaticResource other_tblock}" Foreground="Black"
+                       VerticalAlignment="Center" Margin="0 300 290 0" FontSize="10" HorizontalAlignment="Center" Grid.Row="2"/>
+            <Button x:Name="BtnIDK" Click="BtnIDK_Click" Style="{StaticResource other_button}"
+                    HorizontalAlignment="Center" Background="Transparent"
+                    VerticalAlignment="Center" Grid.Row="2" Grid.Column="0" Height="250"
+                    BorderThickness="1" Width="200"
+                    Margin="0 100 250 0"/>
+
+            <Border CornerRadius="20 20 20 20" HorizontalAlignment="Center" 
+                    VerticalAlignment="Center" Grid.Row="2" Grid.Column="0" Height="150"
+                    BorderThickness="1" Width="350"
+                    Margin="0 0 0 0">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,1"
+                                     EndPoint="1,1">
+                        <GradientStop Color="#FFA500"
+                                  Offset="0.0"/>
+                        <GradientStop Color="#FFCA86"
+                                  Offset="2"/>
+                        <GradientStop Color="#CC5500"
+                                  Offset="1"/>
                     </LinearGradientBrush>
                 </Border.Background>
             </Border>

@@ -63,6 +63,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Windows\IDKWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -73,6 +77,9 @@
     </Compile>
     <Compile Include="Windows\EnterWindow.xaml.cs">
       <DependentUpon>EnterWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\IDKWindow.xaml.cs">
+      <DependentUpon>IDKWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -129,6 +136,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\telegram.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

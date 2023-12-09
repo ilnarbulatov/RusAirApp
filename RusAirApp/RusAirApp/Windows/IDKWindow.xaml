@@ -1,0 +1,18 @@
+﻿<Window x:Class="RusAirApp.Windows.IDKWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RusAirApp.Windows"
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen" WindowStyle="None"
+        Title="IDKWindow" Height="450" Width="800" ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Background="#66CCFF"/>
+        <TextBlock Text="Здесь пока что ничего нет ¯\_(ツ)_/¯" HorizontalAlignment="Center" FontFamily="Arial" FontWeight="Bold" VerticalAlignment="Center" FontSize="35"/>
+        <Button x:Name="BtnExit" Content="Выход" Click="BtnExit_Click" Grid.Row="1" Background="#66CCFF" BorderThickness="0" FontFamily="Arial" FontWeight="Bold" FontSize="100"/>
+    </Grid>
+</Window>

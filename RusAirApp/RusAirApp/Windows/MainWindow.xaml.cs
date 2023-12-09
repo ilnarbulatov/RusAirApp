@@ -59,5 +59,12 @@ namespace RusAirApp
             if (Mouse.LeftButton == MouseButtonState.Pressed)
                 MainWindow.Window.DragMove();
         }
+
+        private void BtnIDK_Click(object sender, RoutedEventArgs e)
+        {
+            IDKWindow idkw = new IDKWindow();
+            this.Hide();
+            idkw.Show();
+        }
     }
 }
